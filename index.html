@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Portfolio Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="chat.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://kit.fontawesome.com/200329ca9b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!-- chatbot -->
+	<div class="chat-bar-collapsible">
+		<button id="chat-button" type="button" class="collapsible"><i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i></button>
+		<div class="content">
+			<div class="full-chat-block">
+				<div class="outer-container">
+					<div class="chat-container" >
+						<div id="chatbox">
+							<h5 id="chat-timestamp"></h5>
+							<p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+						</div>
+					
+					<div class="chat-bar-input-block">
+						<div id="userInput">
+							<input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a Message">
+							<p></p>
+						</div>
+						<div class="chat-bar-icons">
+							<i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart" onclick="heartButton()"></i>
+							<i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+						</div>
+					</div>
+					<div id="chat-bar-bottom">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- chatbot end -->
+	<div id="header">
+		<video autoplay loop muted plays-inline class="back-video" id="back-video">
+				<source src="video4.mp4" type="video/mp4">
+		</video>
+		<div class="container">
+			
+			<nav>
+				<img src="2.png" class="logo">
+				<ul id="sidemenu">
+					<!-- <audio controls autoplay loop ><source src="next.ogg" type="audio/mp3"><i class="fa-solid fa-volume"></i></audio> -->
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#Portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact </a></li>
+					<i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+				</ul>
+				<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+			</nav>
+			<div class="header-text">
+				<p>Student & Developer</p>
+				<h1><span>Rishabh</span> Bisht</h1>
+			</div>
+		</div>
+	</div>
+	<!-- About -->
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="user.jpg">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>This is Rishabh with some following information regrading the projects which I have created</p>
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('experience')">Experience</p>
+						<p class="tab-links" onclick="opentab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>UI/UX</span><br><b>Designing Web/App interfaces</b></li>
+							<li><span>Web Development</span><br><b>Web app Development</b></li>
+							<li><span>IOT Development</span><br><b>Internet of things development</b></li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>Oct 2022</span><br><b>Team lead in Zerone(Technical event)</b></li>
+							<li><span>Jan 2022</span><br><b>Research Expo-2022:</b><br><p>1st runner up against 34 teams</p></li>
+							<li><span>Oct 2021</span><br><b>Member of IEEE Community</b></li>
+							<li><span>2020-2021</span><br><b>Management Community in Graphic Era</b></li>
+							
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2020 - Current</span><br><b>B.tech CSE from Graphic Era University,Dehradun</b></li>
+							<li><span>2019</span><br><b>12th from St.Thomas,Dehradun</b></li>
+							<li><span>2017</span><br><b>10th from St.Thomas,Dehradun</b></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ------services----- -->
+	<div id="services">
+		<div class="container">
+			<h1 class="sub-title">My Services</h1>
+			<div class="services-list">
+				<div>
+					<i class="fa-solid fa-code"></i>
+					<h2>Web development</h2>
+					<p>Web development refers to the building, creating, and maintaining of websites.</p>
+					<a href="https://www.geeksforgeeks.org/web-development/">Learn more</a>
+				</div>
+				<div>
+					<i class="fa-solid fa-crop-simple"></i>
+					<h2>UI/UX design</h2>
+					<p>There has been always confusion between designers about the difference between UI and UX design.</p>
+					<a href="https://www.geeksforgeeks.org/ui-vs-ux-design-which-career-option-should-you-choose/">Learn more</a>
+				</div>
+				<div>
+					<i class="fa-brands fa-app-store-ios"></i>
+					<h2>IOT development</h2>
+					<p>Internet of Things (IoT) is the networking of physical objects that contain electronics embedded.</p>
+					<a href="https://www.geeksforgeeks.org/introduction-to-internet-of-things-iot-set-1/">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- portfolio -->
+	<div id="Portfolio">
+		<div class="container">
+			<h1 class="sub-title">My work</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="supermarket3.jpg">
+					<!-- <video autoplay loop muted plays-inline class="supermarket-video">
+						<source src="supermarket.mp4" type="video/mp4">
+					</video> -->
+					<div class="layer">
+						<h3>E-commmerce Website</h3>
+						<p>This is a supermarket website for Crony Supermart.</p>
+						<a href="https://rishabh3201.github.io/supermarket/"><i class="fa-solid fa-link"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="chatbot2.jpg">
+					<div class="layer">
+						<h3>Chatbot </h3>
+						<p>This is Chatbot for AICTE,which can answer your queries on AICTE.</p>
+						<a href="https://rishabh3201.github.io/chatbot/"><i class="fa-solid fa-link"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="musicplayer.jpg">
+					<div class="layer">
+						<h3>Music Player</h3>
+						<p>This is a Music Player website in which anyone can listen to music.</p>
+						<a href="https://rishabh3201.github.io/music.github.io/"><i class="fa-solid fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn">See more</a>
+		</div>
+	</div>
+
+	<!-- contact -->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fa-sharp fa-solid fa-paper-plane"></i>bishtrishabh2016953@gmail.com</p>
+					<p><i class="fa-solid fa-phone"></i>8218964361</p>
+					<div class="social-icons">
+						<a href=""><i class="fa-brands fa-facebook"></i></a>
+						<a href=""><i class="fa-brands fa-instagram"></i></a>
+						<a href=""><i class="fa-brands fa-linkedin"></i></a>
+					</div>
+					<a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+				</div>
+				<div class="contact-right">
+					<form>
+						<input type="text" name="name" placeholder="Your name" required>
+						<input type="email" name="email" placeholder="your email" required>
+						<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+						<button type="submit" class="btn btn2">submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright <i class="fa-regular fa-copyright"></i> Rishabh,Made by Rishabh Bisht</p>
+		</div>
+	</div>
+	<script>
+		document.getElementById('back-video').playbackRate=0.5;
+	</script>
+	<script>
+		var tablinks=document.getElementsByClassName("tab-links");
+		var tabcontents=document.getElementsByClassName("tab-contents");
+		function opentab(tabname){
+			for(tablink of tablinks){
+				tablink.classList.remove("active-link");
+			}
+			for(tabcontent of tabcontents){
+				tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+		}
+
+	</script>
+	<script >
+		var sidemeu=document.getElementById("sidemenu");
+		function openmenu(){
+			sidemeu.style.right = "0";
+		}
+		function closemenu(){
+			sidemeu.style.right = "-200px";
+
+		}
+	</script>
+	
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="responses.js">
+		
+	</script>
+	<script src="chat.js">
+			
+	</script>
+</html>
+
+<!-- rpaonh.patna@gmail.com
+Trivedi@123 -->
